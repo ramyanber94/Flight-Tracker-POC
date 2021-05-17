@@ -1,0 +1,13 @@
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 16em;
+}
+.flight-number {
+  padding: 25px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

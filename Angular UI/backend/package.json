@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node-backend.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cros": "^1.0.1",
+    "express": "^4.17.1",
+    "init": "^0.1.2",
+    "msnodesqlv8": "^2.1.0",
+    "mssql": "^7.1.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

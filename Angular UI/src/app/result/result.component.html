@@ -1,0 +1,72 @@
+<div class="container" *ngIf="isShow">
+    <div class="row align-items-start">
+      <div class="col">
+        <h3>AirLine Names: </h3>
+        <ol>
+          <li *ngFor="let d of data"><strong>{{d.airline.name}}</strong></li>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>Arrival Airport Names: </h3>
+        <ol>
+          <ng-container *ngFor="let d of data">
+          <li>
+            <div *ngIf="d.arrival.airport == null"><strong style="color: red;">Arrival Airport is not available</strong></div>
+            <strong>{{d.arrival.airport}}</strong>
+          </li>
+        </ng-container>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>Arival Estimated Dates: </h3>
+        <ol>
+          <li *ngFor="let d of data"><strong>{{d.arrival.estimated | date: 'long'}}</strong></li>
+        </ol>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col">
+        <h3>Arrival scheduled Dates: </h3>
+        <ol>
+          <li *ngFor="let d of data"><strong>{{d.arrival.scheduled | date: 'long'}}</strong></li>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>Departure Airports : </h3>
+        <ol>
+          <ng-container *ngFor="let d of data">
+          <li>
+            <div *ngIf="d.departure.airport == null"><strong style="color: red;">Departure Airport is not available</strong></div>
+            <strong>{{d.departure.airport}}</strong>
+          </li>
+        </ng-container>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>Departure Estimated Dates: </h3>
+        <ol>
+          <li *ngFor="let d of data"><strong>{{d.departure.estimated | date: 'long'}}</strong></li>
+        </ol>
+      </div>
+    </div>
+    <div class="row align-items-end">
+      <div class="col">
+        <h3>Departure Scheduled Dates: </h3>
+        <ol>
+          <li *ngFor="let d of data"><strong>{{d.departure.scheduled | date: 'long'}}</strong></li>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>Flights status: </h3>
+        <ol>
+          <li *ngFor="let d of data"><strong>{{d.flight_status}}</strong></li>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>Flights number: </h3>
+        <ol>
+          <li *ngFor="let d of data"><strong>{{d.flight.number}}</strong></li>
+        </ol>
+      </div>
+    </div>
+  </div>
